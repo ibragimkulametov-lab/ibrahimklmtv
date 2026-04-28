@@ -112,12 +112,10 @@ p {
     transform: scale(1.1);
 }
 
-section:not(.hero) {
-    opacity: 1;
-    transform: none;
-}
-
 section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
     max-width: 600px;
     margin: auto;
 }
