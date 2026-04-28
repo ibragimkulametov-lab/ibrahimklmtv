@@ -74,3 +74,7 @@ window.addEventListener("load", () => {
     // ставим язык
     setLang("ru");
 });
+
+sections.forEach((section, index) => {
+    section.style.transitionDelay = (index * 0.2) + "s";
+});
