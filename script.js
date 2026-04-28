@@ -3,8 +3,11 @@ const sections = document.querySelectorAll('section');
 window.addEventListener("scroll", () => {
     sections.forEach(section => {
         const top = section.getBoundingClientRect().top;
+
         if (top < window.innerHeight - 100) {
             section.classList.add("show");
+        } else {
+            section.classList.remove("show");
         }
     });
 });
@@ -57,12 +60,18 @@ const translations = {
 };
 
 function setLang(lang) {
-    document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-        if (translations[lang][key]) {
-            el.innerText = translations[lang][key];
-        }
-    });
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+        document.querySelectorAll("[data-key]").forEach(el => {
+            const key = el.getAttribute("data-key");
+            if (translations[lang][key]) {
+                el.innerText = translations[lang][key];
+            }
+        });
+
+        document.body.style.opacity = "1";
+    }, 200);
 }
 
 window.addEventListener("load", () => {
