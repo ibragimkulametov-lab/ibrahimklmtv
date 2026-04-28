@@ -25,7 +25,10 @@ const translations = {
         ayahText: "«Среди Его знамений — то, что Он создал для вас жен из вас самих, чтобы вы находили в них покой, и установил между вами любовь и милость»",
         duaTitle: "Дуа за молодых",
         duaText: "О Аллах, благослови их обоих, благослови их союз и объедини их в благе.",
-        footer: "Ibrahim & Feride — 2026"
+        footer: "Ibrahim & Feride — 2026",
+        calendar: "Добавить в календарь",
+        map: "Открыть карту",
+        address: "Zugspitzstrasse 11, 84539 Ampfing, Bayern, Deutschland"
     },
 
     de: {
@@ -40,7 +43,10 @@ const translations = {
         ayahText: "„Zu Seinen Zeichen gehört, dass Er für euch Gattinnen aus euch selbst erschuf, damit ihr bei ihnen Ruhe findet, und Er hat zwischen euch Liebe und Barmherzigkeit gesetzt.“",
         duaTitle: "Bittgebet für das Paar",
         duaText: "O Allah, segne beide, segne ihre Verbindung und vereine sie im Guten.",
-        footer: "Ibrahim & Feride — 2026"
+        footer: "Ibrahim & Feride — 2026",
+        calendar: "Zum Kalender hinzufügen",
+        map: "Karte öffnen",
+        address: "Zugspitzstrasse 11, 84539 Ampfing, Bayern, Deutschland"
     },
 
     tr: {
@@ -55,7 +61,10 @@ const translations = {
         ayahText: "“O’nun ayetlerinden biri de, size kendi cinsinizden eşler yaratması, aranızda sevgi ve merhamet var etmesidir.”",
         duaTitle: "Çift için dua",
         duaText: "Allahım, onları bereketlendir, birliklerini hayırlı kıl ve aralarını hayırla birleştir.",
-        footer: "Ibrahim & Feride — 2026"
+        footer: "Ibrahim & Feride — 2026",
+        calendar: "Takvime ekle",
+        map: "Haritayı aç",
+        address: "Zugspitzstrasse 11, 84539 Ampfing, Bayern, Deutschland"
     }
 };
 
@@ -80,7 +89,7 @@ window.addEventListener("load", () => {
     sections.forEach((section, index) => {
         setTimeout(() => {
             section.classList.add("show");
-        }, index * 300);
+        }, index * 500);
     });
 });
 
