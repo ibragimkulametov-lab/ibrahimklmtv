@@ -79,33 +79,40 @@ h1, h2, h3, p {
     transition: all 0.3s ease;
 }
 .lang {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  z-index: 9999; /* самое важное - чтобы кнопки были поверх всего */
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .lang button {
-  background: white;
-  border: none;
-  padding: 8px 12px;
-  margin: 3px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 3px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .lang button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+section:not(.hero) {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 
 section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-
-  max-width: 600px;
-  margin: auto;
+    max-width: 600px;
+    margin: auto;
 }
+
 .info:hover, .ayah:hover, .dua:hover {
     transform: translateY(-5px);
     transition: 0.3s;
@@ -114,5 +121,5 @@ p {
     line-height: 1.6;
 }
 .lang button:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
