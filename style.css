@@ -1,25 +1,27 @@
 body{
 margin:0;
 font-family:'Montserrat',sans-serif;
-background:#f5f5f5;
+background:#f8f7f3;
 color:#333;
 text-align:center;
 }
 
 .hero{
-padding:120px 20px;
-background:linear-gradient(120deg,#e9e4d4,#d9e4dd);
+padding: 140px 20px;
+background:linear-gradient(135deg,#d8e3dc,#f5efe6);
 }
 
 .hero h1{
-font-size:50px;
+font-size:60px;
 font-family:'Cormorant Garamond',serif;
 margin-bottom:10px;
+letter-spacing: 2px;
 }
 
 .subtitle{
-font-size:20px;
-opacity:0.7;
+font-size:22px;
+opacity:0.8;
+letter-spacing: 1px;
 }
 
 .info{
@@ -38,8 +40,8 @@ background:#f0efe9;
 }
 
 .arabic{
-font-size:26px;
-line-height:1.8;
+font-size: 28px;
+line-height:2;
 direction:rtl;
 font-family:serif;
 }
@@ -57,4 +59,60 @@ background:white;
 footer{
 padding:40px;
 background:#e9e4d4;
+font-size:14px;
+opacity: 0.7;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.info, .ayah, .dua {
+    max-width: 500px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 70px 30px;
+    transition: 0.3s;
+}
+h1, h2, h3, p {
+    transition: all 0.3s ease;
+}
+.lang {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.lang button {
+  background: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lang button:hover {
+  transform: scale(1.1);
+}
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+
+  max-width: 600px;
+  margin: auto;
+}
+.info:hover, .ayah:hover, .dua:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+p {
+    line-height: 1.6;
+}
+.lang button:active {
+  transform: scale(0.95);
 }
