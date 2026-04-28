@@ -115,7 +115,8 @@ p {
 section {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);    max-width: 600px;
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: 600px;
     margin: auto;
 }
 
@@ -133,6 +134,7 @@ p {
 .lang button:active {
     transform: scale(0.95);
 }
+
 .hero h1 {
     animation: fadeIn 1s ease forwards;
 }
@@ -146,6 +148,7 @@ p {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

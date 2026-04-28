@@ -66,13 +66,13 @@ function setLang(lang) {
 }
 
 window.addEventListener("load", () => {
-    // показываем секции
-    sections.forEach(section => {
-        section.classList.add("show");
-    });
-
-    // ставим язык
     setLang("ru");
+
+    sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 300);
+    });
 });
 
 sections.forEach((section, index) => {
