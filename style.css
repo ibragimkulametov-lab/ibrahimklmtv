@@ -12,12 +12,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 120px 20px 60px;
     background: linear-gradient(135deg, #d8e3dc, #f5efe6);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
     backdrop-filter: blur(20px);
     position: relative;
+    overflow: visible;
 }
 
 .hero h1 {
@@ -220,6 +221,8 @@ p.address {
     justify-content: center; /* центр по горизонтали */
     align-items: center;     /* центр по вертикали (если нужно) */
     margin-bottom: 10px;
+    overflow: visible; /* чтобы тени не обрезались */
+    margin-top: 40px;
 }
 
 .monogram svg {
@@ -229,6 +232,7 @@ p.address {
         drop-shadow(0 5px 10px rgba(0,0,0,0.15))
         drop-shadow(0 0 10px rgba(212,175,55,0.4));
         display: block;
+        margin: 0 auto;
 }
 .divider {
     display: flex;
