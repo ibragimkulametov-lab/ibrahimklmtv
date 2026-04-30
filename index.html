@@ -9,19 +9,67 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <section class="hero">
-        <h1 data-key="title">Ibrahim & Feride</h1>
-        <p class="subtitle" data-key="invite">Приглашение на свадьбу</p>
-            <div class="lang">
+<div class="lang">
         <button onclick="setLang('ru')">RU</button>
         <button onclick="setLang('de')">DE</button>
         <button onclick="setLang('tr')">TR</button>
     </div>
 
+    <section class="hero">
+<div class="monogram">
+<svg viewBox="0 -50 500 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e3a1"/>
+      <stop offset="40%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#b8964a"/>
+      <stop offset="100%" stop-color="#f5e3a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- I -->
+  <text x="50" y="110"
+        font-family="Great Vibes"
+        font-size="150"
+        fill="url(#gold)">
+    I
+  </text>
+
+  <!-- & -->
+  <text x="200" y="140"
+        font-family="Great Vibes"
+        font-size="90"
+        fill="url(#gold)">
+    &
+  </text>
+
+  <!-- F -->
+  <text x="280" y="180"
+        font-family="Great Vibes"
+        font-size="150"
+        fill="url(#gold)">
+    F
+  </text>
+
+</svg>
+</div>
+        <div class="divider">
+    <img src="divider.png" alt="divider">
+        </div>
+
+<div class="names">
+    <div class="name name-top" data-key="name1">Ибрахим</div>
+    <div class="amp">&</div>
+    <div class="name name-bottom" data-key="name2">Фериде</div>
+</div>
+
+<p class="subtitle" data-key="invite">Приглашение на свадьбу</p>
     </section>
 
     <section class="info">
@@ -32,8 +80,7 @@
         <p>19:00</p>
 
         <h2 data-key="place">Место</h2>
-        <p data-key="placeValue">Waldkraiburg</p>
-        <p data-key="address">
+        <p class="address" data-key="address">
 Zugspitzstrasse 11, 84539 Ampfing, Bayern, Deutschland
 </p>
         <div class="actions">

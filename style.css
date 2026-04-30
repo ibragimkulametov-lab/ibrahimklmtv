@@ -1,19 +1,26 @@
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #f8f7f3;
+    font-family: 'Playfair Display', serif;
+    background: radial-gradient(circle at top left, #f4f1ea, #e9e6df 40%, #e1ddd5);
     color: #333;
     text-align: center;
-    transition: opacity 0.3s ease;
 }
 
 .hero {
-    padding: 140px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     background: linear-gradient(135deg, #d8e3dc, #f5efe6);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    backdrop-filter: blur(20px);
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -97,6 +104,7 @@ p {
     padding: 8px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .lang button {
@@ -116,7 +124,8 @@ p {
 section {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 1.4s cubic-bezier(0.22, 1, 0.36, 1);    max-width: 600px;
+    transition: all 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: 600px;
     margin: auto;
 }
 
@@ -140,7 +149,10 @@ p {
 }
 
 .subtitle {
-    animation: fadeIn 1.5s ease forwards;
+    font-size: 18px;
+    letter-spacing: 6px;
+    color: #b8a98a;
+    margin-top: 20px;
 }
 
 @keyframes fadeIn {
@@ -173,4 +185,124 @@ p {
 
 .btn:hover {
     transform: translateY(-2px);
+}
+
+p.address {
+    font-size: 14px
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    z-index: 0;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+.monogram {
+    display: flex;
+    justify-content: center; /* центр по горизонтали */
+    align-items: center;     /* центр по вертикали (если нужно) */
+    margin-bottom: 5px;
+}
+
+.monogram svg {
+    width: 100%;
+    filter:
+        drop-shadow(0 5px 10px rgba(0,0,0,0.15))
+        drop-shadow(0 0 10px rgba(212,175,55,0.4));
+        display: block;
+}
+.divider {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 40px;
+}
+
+.divider svg {
+    opacity: 0.8;
+}
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: #caa64a;
+    text-transform: none; /* ВАЖНО убрать uppercase */
+}
+.names {
+    gap: 10px; /* регулирует расстояние между верх/низ */
+}
+.name-top {
+    align-self: flex;
+}
+
+.name-bottom {
+    align-self: flex;
+}
+
+.amp {
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    margin: -5px 0; /* поднимаем амперсанд чуть выше */
+    color: #caa64a;
+}
+.divider {
+    margin: 30px 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.divider img {
+    width: 400px;
+    opacity: 0.85;
+    filter: drop-shadow(0 2px 6px rgba(202,166,74,0.3));
+}
+.name, .amp {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* сама анимация */
+@keyframes writeName {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* по очереди */
+.name-top {
+    animation: writeName 1s ease forwards;
+}
+
+.amp {
+    animation: writeName 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.name-bottom {
+    animation: writeName 1s ease forwards;
+    animation-delay: 0.8s;
 }
