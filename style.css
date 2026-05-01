@@ -228,12 +228,14 @@ p.address {
 .monogram svg {
     width: 300px;
     max-width: 80vw;
-    filter:
-        drop-shadow(0 5px 10px rgba(0,0,0,0.15))
-        drop-shadow(0 0 10px rgba(212,175,55,0.4));
-        display: block;
-        margin: 0 auto;
-        overflow: visible;
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+    filter: none;
+}
+.monogram path {
+    fill: url(#goldGradient);
+    filter: none;
 }
 .divider {
     display: flex;
