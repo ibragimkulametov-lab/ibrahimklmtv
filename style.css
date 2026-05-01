@@ -328,3 +328,13 @@ p.address {
 svg {
     overflow: visible;
 }
+.monogram svg {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.monogram text {
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
