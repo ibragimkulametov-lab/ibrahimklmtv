@@ -232,12 +232,15 @@ p.address {
     margin: 0 auto;
     overflow: visible;
     filter: none;
-    transform: scale(0.95);
+    transform: translateZ(0);
 }
 .monogram path {
     fill: url(#goldGradient);
     filter: none;
     shape-rendering: geometricPrecision;
+}
+.monogram text {
+    -webkit-font-smoothing: antialiased;
 }
 .divider {
     display: flex;
