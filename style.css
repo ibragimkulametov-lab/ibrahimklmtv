@@ -259,11 +259,12 @@ p.address {
 }
 
 .name {
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
     letter-spacing: 2px;
     color: #caa64a;
     text-transform: none; /* ВАЖНО убрать uppercase */
+    font-style: italic;
 }
 @media (max-width: 768px) {
     .name {
@@ -282,10 +283,11 @@ p.address {
 }
 
 .amp {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 35px;
     margin: -5px 0; /* поднимаем амперсанд чуть выше */
     color: #caa64a;
+    font-style: italic;
 }
 .divider {
     margin: 30px 0 40px;
