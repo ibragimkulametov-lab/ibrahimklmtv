@@ -233,6 +233,7 @@ p.address {
         drop-shadow(0 0 10px rgba(212,175,55,0.4));
         display: block;
         margin: 0 auto;
+        overflow: visible;
 }
 .divider {
     display: flex;
