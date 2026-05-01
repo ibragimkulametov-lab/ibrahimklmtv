@@ -232,10 +232,12 @@ p.address {
     margin: 0 auto;
     overflow: visible;
     filter: none;
+    transform: translateZ(0);
 }
 .monogram path {
     fill: url(#goldGradient);
     filter: none;
+    shape-rendering: geometricPrecision;
 }
 .divider {
     display: flex;
