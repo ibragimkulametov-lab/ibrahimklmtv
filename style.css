@@ -331,6 +331,7 @@ svg {
 .monogram svg {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    padding: 20px;
 }
 
 .monogram text {
