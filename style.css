@@ -7,7 +7,7 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -337,4 +337,9 @@ svg {
     transform: translateZ(0);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
+}
+@supports (-webkit-touch-callout: none) {
+    .monogram svg text {
+        dominant-baseline: middle;
+    }
 }
