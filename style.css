@@ -326,12 +326,12 @@ p.address {
     animation-delay: 0.8s;
 }
 svg {
-    overflow: visible;
+    overflow: visible !important;
 }
 .monogram svg {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-    padding: 20px;
+    padding: 40px;
 }
 
 .monogram text {
